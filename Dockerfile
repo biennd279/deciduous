@@ -24,7 +24,7 @@ FROM nginx:stable-alpine AS production
 WORKDIR /app
 
 # Copy built web application files to Nginx's html directory
-COPY --from=build /app/*.html /app/*.js /usr/share/nginx/html/
+COPY --from=build /app/*.html /app/*.js /app/*.png /usr/share/nginx/html/
 
 
 # Copy CLI file
